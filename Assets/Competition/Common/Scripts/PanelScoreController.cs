@@ -28,8 +28,9 @@ namespace SIGVerse.Competition
 		private Text scoreValText;
 		private Text totalValText;
 
+#if SIGVERSE_PUN
 		private bool isUsingPun = true;
-
+#endif
 
 		void Awake()
 		{
@@ -39,7 +40,9 @@ namespace SIGVerse.Competition
 
 		public void DontUsePun()
 		{
+#if SIGVERSE_PUN
 			this.isUsingPun = false;
+#endif
 		}
 
 #if SIGVERSE_PUN
